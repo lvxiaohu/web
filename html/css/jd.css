@@ -1,0 +1,179 @@
+#container {
+    width: 1209px;
+    margin: 0px auto;
+}
+#top {
+    height: 30px;
+    /* border: 1px solid black; */
+}
+.nav {
+    height: 110px;
+    /* border: 1px solid black; */
+    /* background-image: url("jd-images/tao.jpg") */
+}
+#shopheader{
+    height: 40px;
+    background-color: #E3E4E5;
+    /* margin-left: 30%; */
+
+}
+#shopheader li{
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#w {
+    height: 643px;
+    /* border: 1px solid black; */
+}
+#left {
+    margin-top: 5px;
+    width: 360px;
+    height: 464px;
+    float: left;
+    background-image: url("../jd-images/lanmei.jpg");
+    background-repeat: no-repeat;
+    /* border: 1px solid yellowgreen; */
+}
+#left p {
+    padding-top: 355px;
+    width: 360px;
+}
+#right {
+    margin-top: 5px;
+    background-color: white;  
+    width: 840px; 
+    float: left;
+    /* border: 1px solid yellowgreen; */
+}
+#skuname {
+    font: 700 16px Arial,"microsoft yahei";
+    color: #666;
+    padding-top: 10px;
+    line-height: 28px;
+    margin-bottom: 5px;
+}
+#skuname img {
+    /* float: left; */
+    margin-top: 3px;
+    margin-right: 10px;
+}
+.fl {
+    float: left;
+}
+.lh {
+    zoom: 1;
+    overflow: hidden;
+}
+.active-banner {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+    zoom: 1;
+}
+.summary-price-wrap {
+    background: #FFF;
+}
+.dt {
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    font-family: simsun;
+    color: #999;
+
+}
+.dd {
+    margin-left: 70px;
+    width: 850px;
+}
+.dt1 {
+    font-family: simsun;
+    color: #999;
+    height: 22px;
+    width: 900px;
+    margin-top: 20px ;
+    margin-left: 10px;
+    /* float: left; */
+    clear: both;
+}
+.price {
+    color: #E4393C;
+    font-family: "microsoft yahei";
+    margin-right: 10px;
+    margin-top: 2px;
+    float: left;
+}
+
+.summary-price-wrap price {
+    color: #E4393C;
+    font-family: "microsoft yahei";
+    margin-right: 10px;
+}
+.dd a {
+    margin-left: 10px;
+    
+}
+.quan-item {
+    position: relative;
+    float: left;
+    height: 16px;
+    padding-left: 2px;
+    margin-left: 30px;
+    line-height: 15px;
+    text-align: center;
+    border-top: 1px solid #df3033;
+    border-bottom: 1px solid #df3033;
+    background: #FFDEDF;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-right: 13px;
+    cursor: pointer;
+}
+#b{
+    position: absolute;
+    top: -1px;
+    display: block;
+    height: 18px;
+    width: 2px;
+    overflow: hidden;
+    margin-left: 65px;
+    background: url(../jd-images/quan-arr.gif) no-repeat;
+}
+#s{
+    left: 0;
+    position: absolute;
+    top: -1px;
+    display: block;
+    height: 18px;
+    width: 2px;
+    overflow: hidden;
+    margin-left: 0px;
+    background: url(../jd-images/quan-arr.gif) no-repeat;
+    background-position: -2px 0;
+}
+.text {
+    padding: 0 10px;
+    color: #df3033;
+    font-size: 12px;
+    float: left;
+}
+#end {
+    height: 23px;
+    border: 1px solid black;
+    background: gainsboro;
+}
+#top li {
+    float: left;
+    margin-left: 30px;
+    margin-top: 5px;
+    background: #FFF;
+    font-size: 14px;
+    font-family: 微软雅黑, Arial, sans-serif;
+}
+#top ul {
+    margin-left: 20%;
+}

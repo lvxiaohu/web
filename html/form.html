@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单</title>
+</head>
+<style>
+    div {
+        width: 500px;
+        margin: 0 auto;
+    }
+</style>
+<body>
+    <div>
+        <form action="http://192.168.1.#" method="POST">
+                <p>FirstName:<input type="text" name="FirstName" value="三儿"></p>
+                <p>LastName:<input type="text" name="LastName" value="张"></p>
+                <p>Password:<input type="password" name="password"></p>
+                <p>性别：<input type="radio" name='nv' value="女" checked="checked"> 女 
+                <input type="radio" name='men'' value="男"> 男
+                 </p>
+            <p>
+              学历:<select name="学历" id="">
+        
+                 <option value="大学"">大学</option>
+                 <option value="初中"">初中</option>
+                 <option value="小学">小学</option>
+             </select>
+            </p>
+            <p>
+                 <textarea name="intro" id="" cols="30" rows="10">I am a Chinese</textarea>
+            </p>
+            <p> 爱好: 
+                篮球<input type="checkbox" name="hobby" id="" value="篮球" checked="checked">
+                羽毛球<input type="checkbox" name="hobby" id="" value="羽毛球">
+                游泳<input type="checkbox" name="hobby" id="" value="游泳">
+            </p>
+            <p> 上传头像:<input type="file" name="pic" id=""></p>
+            <p>隐藏域：<input type="hidden" name="none" value="192.168.1.1"></p>
+            <p>
+                <input type="submit" value="提交">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

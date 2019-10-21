@@ -1,0 +1,44 @@
+#container {
+    width: 1209px;
+    margin: 0px auto;
+}
+#top {
+    height: 30px;
+    /* border: 1px solid black; */
+}
+.nav {
+    height: 110px;
+    /* border: 1px solid black; */
+    /* background-image: url("jd-images/tao.jpg") */
+}
+#shopheader{
+    height: 40px;
+    background-color: #E3E4E5;
+    /* margin-left: 30%; */
+
+}
+#shopheader li{
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#w {
+    height: 643px;
+    border: 1px solid black;
+}
+#end {
+    height: 23px;
+    border: 1px solid black;
+    background: gainsboro;
+}
+#top li {
+    float: left;
+    margin-left: 40px;
+    margin-top: 5px;
+    background: #FFF;
+    font-size: 14px;
+    font-family: 微软雅黑, Arial, sans-serif;
+}
+#top ul {
+    margin-left: 20%;
+}

@@ -1,0 +1,64 @@
+#container {
+    width: 1000px;
+    background: gray;
+    margin: 0px auto;
+}
+#header {
+    background:darkgray;
+    height: 40px;
+
+    /* float: left; */
+}
+#nva li {
+    background: ghostwhite;
+    float: left;
+    width: 140px;
+    margin-right: 2px;
+}
+#nva a {
+    font-family: "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle;
+    color: green;
+    text-align: center;
+    display: block;
+}
+#nva a:hover{
+    background: yellow;
+    color: red;
+}
+#main {
+    background: gray;
+    height: 600px;
+    /* display: inline-block; */
+    /* float: left; */
+
+}
+#footer {
+    background: purple;
+    height: 200px;
+    /* float: left; */
+    /* clear: both; */
+}
+#lside {
+    width: 700px;
+    height: 600px;
+    background: pink;
+    /* border: 1px outset greenyellow; */
+    float: left;
+}
+.four {
+    height: 250px;
+    width: 300px;
+    background: white;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}
+#rside {
+    width: 300px;
+    height: 600px;
+    background: gold;
+    float: right;
+}

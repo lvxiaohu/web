@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Overflow</title>
+    <link rel="stylesheet" href="css/css-reset.css">
+</head>
+<style>
+#test1 {
+    width: 200px;
+    height: 500px;
+    border: 1px solid green;
+    margin-left: 30px;
+}
+#test1 p {
+    margin: 40px 0px;
+    width: 200px;
+    height: 100px;
+    border: 1px solid red;
+    overflow: auto;
+    /* text-overflow: ellipsis; */
+}
+#left {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    float: left;
+}
+
+#right {
+    width: 60px;
+    height: 60px;
+    background: black;
+    float: left;
+}
+#end {
+    width: 80px;
+    height: 60px;
+    background: blue;
+    clear: both;
+}
+#ablok{
+    background-color:  white;
+    /* border: solid 1px black; */
+    overflow: hidden;
+    *zoom: 1;
+    color: whitesmoke;
+}
+</style>
+<body>
+    <div id="test1">
+        <p>允许内容顶开或溢出指定的容器边界。
+            break-word：
+            内容将在边界内换行，如果需要，单词内部允许断行。它要求一个没有断行破发点的词必须保持为一个整体单位，如果当前行无法放下需要被打断的单词，为了保持完整性，会将整个单词放到下一行进行展示。这与word-break的break-word值效果相同
+        </p>
+    </div>
+    <div id="ablok">
+        <div id="left">我是左边</div>
+        <div id="right">我是右边</div>
+        <div id="end">我是3</div>
+        <div id="right">我是右边</div>
+        <div id="left">我是左边</div>
+    </div>
+</body>
+</html>
