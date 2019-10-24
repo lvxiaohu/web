@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/css-reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+
+
+
+<ul >
+    <li id='list' class="list">
+        <a href="index.html" id="link1">微博</a>
+        <ul id="ul1">
+            <li>评论</li>
+            <li>私信</li>
+            <li>@我</li>
+        </ul>
+    </li>
+</ul>
+<script>
+document.getElementById('list').onmouseover = show;
+document.getElementById('list').onmouseout = hide;
+
+function show () {
+    document.getElementById('ul1').style.display='block';
+    // document.getElementById('link1').style.background='yellow';
+    // document.getElementById('link1').style.background='red';
+}
+
+function hide () {
+    document.getElementById('ul1').style.display='none';
+    // document.getElementById('link1').style.background='yellow';
+    // document.getElementById('link1').style.background='red';
+}
+// alert('测试');
+</script>
+</body>
+</html>
