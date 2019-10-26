@@ -2,19 +2,18 @@
     width: 80px;
     height: 30px;
     border: 1px solid green;
+    background: antiquewhite;
 }
 .list a {
     line-height: 30px;
     text-align: center;
     text-decoration: none;
     color: #000000;
-    background: #f1f1f1;
-
 }
-ul ul {
+#ul1 {
     width: 140px;
     border: green 1px solid;
-    background: greenyellow;
+    /* background: white; */
     position: absolute;
     top: 30px;
     left: -1px;
@@ -23,4 +22,5 @@ ul ul {
 ul li {
     text-align: center;
     height: 30px;
+    /* background: yellow; */
 }

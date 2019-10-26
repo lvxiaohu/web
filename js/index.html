@@ -7,12 +7,29 @@
     <title>JavaScript</title>
     <link rel="stylesheet" href="css/css-reset.css">
     <link rel="stylesheet" href="css/index.css">
+<script>
+    // 变量   
+window.onload=function () {
+var li=document.getElementById('list');
+var ul=document.getElementById('ul1');
+var a=document.getElementById('link1');
+// li.onmouseover=show;
+// li.onmouseout=hide;
+// alert('测试');
+li.onmouseover = function() {
+    ul.style.display='block';
+    ul.style.background='yellow';
+};
+li.onmouseout=function() {
+    ul.style.display='none';
+    ul.style.background='red';
+};
+};
+
+
+</script>
 </head>
 <body>
-
-
-
-
 <ul >
     <li id='list' class="list">
         <a href="index.html" id="link1">微博</a>
@@ -23,22 +40,7 @@
         </ul>
     </li>
 </ul>
-<script>
-document.getElementById('list').onmouseover = show;
-document.getElementById('list').onmouseout = hide;
 
-function show () {
-    document.getElementById('ul1').style.display='block';
-    // document.getElementById('link1').style.background='yellow';
-    // document.getElementById('link1').style.background='red';
-}
 
-function hide () {
-    document.getElementById('ul1').style.display='none';
-    // document.getElementById('link1').style.background='yellow';
-    // document.getElementById('link1').style.background='red';
-}
-// alert('测试');
-</script>
 </body>
 </html>

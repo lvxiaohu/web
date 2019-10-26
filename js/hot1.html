@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css-reset.css">
+<style>
+.div1 {width: 200px;height: 200px;background:white;clear: both;border: 3px solid black;position: relative;top: 10px;left: 10px;}
+.p1 {font-size: 20px;font-family: 'Courier New', Courier, monospace;display: block;float: left;}
+.button1 {background: red;float: left;height: 30px;width: 80px;color: white;}
+#div2 {width: 350px;height: 220px;border: 20px solid gray;position: relative;display: none;float: left;position: absolute;top: 200px;left: 460px;}
+#div2 p  {
+    color: black;
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    float: left;
+}
+#color1 {
+    background: red;
+    width: 50px;
+    height: 50px;
+    margin: 1px 5px;
+}
+#color2 {
+    background: yellow;
+    width: 50px;
+    height: 50px;
+    margin: 1px 5px;
+}
+#color3 {
+    background: blue;
+    width: 50px;
+    height: 50px;
+    margin: 1px 5px;
+    clear: both;
+}
+#h1 {
+    background: ghostwhite;
+    width: 50px;
+    height: 50px;
+    margin: 1px 5px;
+}
+#h2 {
+    background: ghostwhite;
+    width: 50px;
+    height: 50px;
+    margin: 1px 5px;
+}
+#h3 {
+    background: ghostwhite;
+    width: 50px;
+    height: 50px;
+    margin: 1px 5px;
+    clear: both;
+}
+#w1 {
+    background: ghostwhite;
+    width: 50px;
+    height: 50px;
+    margin: 1px 5px;
+}
+#w2 {
+    background: ghostwhite;
+    width: 50px;
+    height: 50px;
+    margin: 1px 5px;
+}
+#w3 {
+    background: ghostwhite;
+    width: 50px;
+    height: 50px;
+    margin: 1px 5px;
+    clear: both;
+}
+#wbt1 {
+    height: 30px;
+    width: 50px;
+    background:  gold;
+    position: relative;
+    top: 10px;
+    left: 80px;
+}
+#wbt2 {
+    height: 30px;
+    width: 50px;
+    background: green;
+    position: relative;
+    top: 10px;
+    left: 100px;
+}
+</style>
+
+
+<script>
+window.onload=function() {
+    var obuntm=document.getElementById('button1');
+    var div1=document.getElementById('div1');
+    var div2=document.getElementById('div2');
+    // 颜色
+    var color1=document.getElementById('color1');
+    var color2=document.getElementById('color2');
+    var color3=document.getElementById('color3');
+    // 宽
+    var h1=document.getElementById('h1');
+    var h2=document.getElementById('h2');
+    var h3=document.getElementById('h3');
+    // 高
+    var w1=document.getElementById('w1');
+    var w2=document.getElementById('w2');
+    var w3=document.getElementById('w3');
+    //恢复
+    var wbt1=document.getElementById('wbt1');
+    //确认退出
+    var wbt2=document.getElementById('wbt2');
+// 事件
+    obuntm.onclick=function() {
+        div2.style.display='block';
+    };
+// 颜色点击事件
+    color1.onclick=function () {
+        div1.style.background='red';
+    };
+    color2.onclick=function () {
+        div1.style.background='yellow';
+    };
+    color3.onclick=function () {
+        div1.style.background='blue';
+    };
+// 宽度点击事件
+    w1.onclick=function () {
+        div1.style.width='200px';
+    };
+    w2.onclick=function () {
+        div1.style.width='300px';
+    };
+    w3.onclick=function () {
+        div1.style.width='400px';
+
+    };
+// 高度点击事件
+    h1.onclick=function () {
+        div1.style.height='200px';
+    }
+    h2.onclick=function () {
+        div1.style.height='300px';
+    };
+    h3.onclick=function () {
+        div1.style.height='400px';
+    };
+// 还原恢复
+    wbt1.onclick=function(){
+        div1.style="width: 200px;height: 200px;background:white";
+    };
+// 确认退出
+    wbt2.onclick=function(){
+        div2.style.display='none';
+    };
+};
+</script>
+</head>
+
+<body>
+<div>
+    <span class="p1">请为下面的DIV设置样式:</span>
+    <input id='button1' class="button1" type="button" value="点击设置">
+    <div id='div1' class='div1'> </div> 
+    <div id='div2'>
+        <p style="display: block;">请选择背景色:</p> 
+        <input id='color1' type="button" value="红">
+        <input id='color2' type="button" value="黄">
+        <input id='color3' type="button" value="蓝">
+        <p style="display:block">请选择高(PX):</p>
+        <input id='h1' type="button" value="200">
+        <input id='h2' type="button" value="300">
+        <input id='h3' type="button" value="400">
+        <p style="display:block">请选择宽(PX):</p>
+        <input id='w1' type="button" value="200">
+        <input id='w2' type="button" value="300">
+        <input id='w3' type="button" value="400">
+        <input id='wbt1' type="button" value="恢复">
+        <input id='wbt2' type="button" value="确定">
+    </div>
+</div>
+
+</body>
+</html>
