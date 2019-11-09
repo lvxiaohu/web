@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css-reset.css">
+    <link rel="stylesheet" href="css/iphone.css">
+<script>
+window.onload=function() {
+    // alert("hello")
+    var oBt1=document.getElementById('bt1');
+    var oBt2=document.getElementById('bt2');
+    var text=document.getElementById('text1');
+    var talk=document.getElementById('talk');
+    var ico=['img/bq1.png','img/bq2.png'];
+    var num=0;
+    oBt1.style.background="url("+ico[num]+")";
+
+oBt1.onclick=function () {
+    num++;
+    if ( num<ico.length) {
+    oBt1.style.background="url("+ico[num]+")";
+    }else{
+    num=0;
+    oBt1.style.background="url("+ico[num]+")";
+    }
+}
+oBt2.onclick=function() {
+    var nico=ico[num];
+    var in_text=text['value'];
+    if (nico == "img/bq1.png") {
+        talk.innerHTML+='<img style="position: absolute;right: 1px;margin-top: 8px;" src="img/bq1.png" alt="">'+'<p id="span1-right">'+in_text+'</p>';
+    }else{
+        talk.innerHTML+='<img style="position: absolute;left: 1px;" src="img/bq2.png" alt="">'+'<p id="span1-left">'+in_text+'</p>';
+    }
+}
+
+
+// oBt2.onclick= function () {
+    // talk.innerHTML+='<img style="position: absolute;right: 1px;margin-top: 8px;" src="img/bq1.png" alt="">'+'<p id="span1-right">'+in_text+'</p>';
+// };
+// oBt1.onclick= function () {
+    // talk.innerHTML+='<img style="position: absolute;left: 1px;" src="img/bq2.png" alt="">'+'<p id="span1-left">'+in_text+'</p>';
+// };
+}
+</script>
+</head>
+<body>
+    
+    <div id='container'>
+        <div id='talk'>
+           <!-- <img style="position: absolute;right: 1px;margin-top: 8px;" src="img/bq1.png" alt="">
+           <p id="span1-right">大家好,我哈哈～～</p>
+           <img id='img2' src="img/bq2.png" alt=""><p id="span1-left">大家好,我是哈哈哈哈哈哈哈～～</p> -->
+
+        </div>
+        <div id='input'>
+            <input id='bt1' type="button">
+            <input id='text1' type="text" name="输入框" value="">
+            <input id='bt2' type="button" value="发送">
+        </div>
+    </div>
+    <img src="" alt="">
+</body>
+</html>

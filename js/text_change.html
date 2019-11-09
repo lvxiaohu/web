@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文本放大镜</title>
+<style>
+.p1 {
+    width: 30;
+    size: 40;
+}
+.red1 {
+    width: 160px;
+    border: 5px solid red;
+}
+.yellow1 {
+    width: 180px;
+    border: 5px solid yellow;
+}
+</style>
+</head>
+<body>
+    <input id='btn1' type="button" value="放大">
+    <input id='btn2' type="button" value="缩小">
+    <input id='btn3' type="button" value="红">
+    <input id='btn4' type="button" value="黄">
+    <p id='p1'>
+修复多主多节点安装BUG；
+修复手动模式创建集群没有过滤已使用的主机；
+修复创建集群时重名BUG；
+修复添加主机失败时仍产生无效主机记录;
+添加校验规则,不允许添加重复IP的主机;
+调整Prometheus持久化存储空间大小及数据保留天数;
+    </p>
+<script>
+var btn1=document.getElementById('btn1');
+var btn2=document.getElementById('btn2');
+var btn3=document.getElementById('btn3');
+var btn4=document.getElementById('btn4');
+var p1=document.getElementById('p1');
+var num=15;
+btn1.onclick=function() {
+    if ( num < 22) {
+        num ++;
+        p1.style.fontSize=num + 'px';
+    }
+};
+btn2.onclick=function() {
+    if ( num > 10) {
+        num --;
+        p1.style.fontSize=num + 'px';
+    }
+};
+btn3.onclick=function() {
+    p1.className="red1";
+};
+btn4.onclick=function() {
+    p1.className="yellow1";
+}
+</script>
+</body>
+</html>

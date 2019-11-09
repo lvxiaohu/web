@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单</title>
+</head>
+<body>
+   参数： <input type="text" name="" id="el1"> <br>
+   值：   <input type="text" name="" id="va1">
+         <input id='bnt1' type="button" value="点击">
+<div id='div1' style="width: 50px;height: 50px;border: 2px solid red;">
+</div>
+<script>
+var bnt1=document.getElementById('bnt1');
+var el1=document.getElementById('el1');
+var va1=document.getElementById('va1');
+var div1=document.getElementById('div1');
+bnt1['onclick']=function (){
+    div1.style[el1.value]=va1['value'];
+}
+
+</script>
+</body>
+</html>

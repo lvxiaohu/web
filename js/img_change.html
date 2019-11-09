@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击自动切换图片</title>
+    <link rel="stylesheet" href="css/css-reset.css">
+<script>
+window.onload= function () {
+    var oPref=document.getElementById('pref');
+    var oNext=document.getElementById('next');
+    var oP1=document.getElementById('p1');
+    var oSpan=document.getElementById('span1');
+    var oImg=document.getElementById('img1');
+    var num=0;
+    var ImgUrl=['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg'];
+    var attr=['黄菠萝','绿菠萝','紫菠萝','黑菠萝'];
+    var order1=document.getElementById('order1');
+    var cycle1=document.getElementById('cycle1');
+    var p2=document.getElementById('p2');
+    
+    // 初始化
+    function fnTab () {
+        oP1.innerHTML=num+1+'/'+ ImgUrl.length;
+        oImg.src=ImgUrl[num];
+        oSpan.innerHTML=attr[num];
+    };
+    fnTab();
+    //顺序读
+    function order () {
+        oNext.onclick=change_img_next;
+        oPref.onclick=change_img_pref;
+    };
+    order1.onclick=function() {
+        order();
+        order_p2();
+    };
+    
+    // 提示符
+    function order_p2() {
+        p2.innerHTML='图片只能到第一张和最后一张切换';
+    };
+    function cycle_p2() {
+        p2.innerHTML='图片可以循环播放';
+    }
+
+    // 循环读
+    function cycle () {
+        oNext.onclick=cycle_change_img_next;
+        oPref.onclick=cycle_change_img_pref;
+    };
+    cycle1.onclick=function () {
+        cycle();
+        cycle_p2();
+    };
+    // cycle();
+     
+
+    // 顺序读
+    function change_img_pref() {
+        num--;
+        if (num >= 0) {
+            oImg.src=ImgUrl[num];
+            oP1.innerHTML=num+1+'/'+ ImgUrl.length;
+            oSpan.innerHTML=attr[num];
+        }else {
+            alert('已经没有图片啦！');
+        };
+    };
+    function change_img_next() {
+        num++;
+        if ( num < ImgUrl.length) {
+            oImg.src=ImgUrl[num];
+            oP1.innerHTML=num+1+'/'+ ImgUrl.length;
+            oSpan.innerHTML=attr[num];
+        }else {
+            alert('已经没有图片啦！');
+        }
+    };
+    // 循环读
+    function cycle_change_img_pref() {
+        num--;
+        if (num < 0) {
+            num = ImgUrl.length-1;
+            // alert(ImgUrl.length);
+            
+        };
+        fnTab();
+    };
+
+    function cycle_change_img_next() {
+        num++;
+        if (num == ImgUrl.length) {
+            num = 0;
+            // alert(ImgUrl.length);
+        };
+        fnTab();
+    };
+}
+</script>
+<style>
+#container {
+    width: 300px;
+    height: 400px;
+    border: 3px solid gray;
+    margin: 0px auto;
+    position: relative;
+}
+#container a {
+    color: black;
+    padding: 0px 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 5px;
+    filter: opacity(50%);
+}
+#container a:hover{
+    filter: opacity(1);
+}
+#pref {
+    position: relative;
+    top: 180px;
+    /* left: 250px; */
+}
+#next {
+    position: relative;
+    top: 180px;
+    left: 255px;
+}
+#p1 {
+    position: absolute;
+    top: 81px; 
+    line-height: 15px;
+    width: 300px;
+    text-align: center;
+    filter: opacity(0.4);
+    color: white;
+    background: black;
+}
+#span1 {
+    position: absolute;
+    bottom: 0;
+    left: 0 ;
+    line-height: 20px;
+    width: 300px;
+    text-align: center;
+    filter: opacity(0.4);
+    color: white;
+    background: black;
+}
+#img1 {
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    background: white;
+}
+#set a {
+    text-align: center;
+    position: relative;
+    top: 5px;
+    left: 80px;
+    border: 2px solid black;
+}
+
+#p2 {
+    line-height: 50px;
+    text-align: center;
+    padding: 0px 0px;
+    position: absolute;
+    top: 20px;
+    width: 300px;
+}
+</style>
+</head>
+<body>
+    <div id='container'>
+        <div id='set'>
+                <a id='order1' href="javascript:;">顺序播放</a>
+                <a id='cycle1' href="javascript:;">循环播放</a>
+                <p id='p2' style="display: block;">请选择浏览模式！再切换预览图片...</p>
+        </div>
+        <div>
+                <a id='pref' href="javascript:;"><</a>
+                <a id='next' href="javascript:;">></a>
+                <p id='p1'></p>
+                <span id='span1'>风景</span>
+                <img id='img1'>
+        </div>
+
+    </div>
+</body>
+</html>
