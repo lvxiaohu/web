@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+div {
+    height: 50px;
+    width: 50px;
+    border: 2px red solid;
+    color: green;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+</style>
+<script>
+window.onload=function () {
+    var aDvi=document.getElementsByTagName('div');
+    for (i=0;i<25;i++) {
+        document.body.innerHTML+='<div>'+i+'</div>';
+    };
+
+    for (a=0;a<aDvi.length;a++) {
+        if (a > 9) {
+            aDvi[a].style.top=70+'px';
+            aDvi[a].style.left=-590+a*60+'px';
+        }else{
+            aDvi[a].style.left=10+a*60+'px';
+        };
+    };
+
+}
+</script>
+</head>
+<body>
+</body>
+</html>
